@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Radio } from "lucide-react";
+import Navbar from "../layout/Navbar";
 
 export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -11,9 +12,10 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="h-screen overflow-hidden bg-indigo-500 rounded-3xl m-5">
+       <Navbar />
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-background" />
+      {/* <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-background" /> */}
 
       <div className="container relative pt-20 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -24,9 +26,9 @@ export default function Hero() {
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
               Connecting You to World-Class Healthcare,{" "}
-              <span className="text-primary">Anytime, Anywhere</span>
+              <span className="text-white">Anytime, Anywhere</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-white mb-8">
               Seamless Telehealth Solutions Across 30 Countries
             </p>
             <div className="flex flex-wrap gap-4">

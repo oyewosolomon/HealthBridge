@@ -26,7 +26,7 @@ export default function Navbar() {
         <a
           key={item.href}
           href={item.href}
-          className="text-muted-foreground hover:text-primary transition-colors"
+          className="text-gray-800 hover:text-primary transition-colors"
         >
           {item.label}
         </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
             </SheetContent>
           </Sheet>
         ) : (
-          <nav className="flex items-center space-x-6 ml-6 flex-1">
+          <nav className="flex justify-center items-center space-x-6 ml-6 flex-1">
             <NavLinks />
           </nav>
         )}
