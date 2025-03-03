@@ -26,7 +26,7 @@ export default function Navbar() {
         <a
           key={item.href}
           href={item.href}
-          className="text-gray-800 hover:text-primary transition-colors"
+          className="text-gray-800 dark:text-white hover:text-primary transition-colors"
         >
           {item.label}
         </a>
@@ -38,7 +38,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-8 flex items-center space-x-2">
-          <span className="font-bold text-xl">HealthBridge</span>
+          <span className="font-bold text-gray-800 dark:text-white text-xl">HealthBridge</span>
         </Link>
 
         {isMobile ? (

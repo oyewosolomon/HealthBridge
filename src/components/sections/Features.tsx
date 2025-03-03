@@ -205,7 +205,7 @@ export default function Features() {
                 <p className="text-gray-600 mb-6 text-lg">
                   Track chronic conditions with real-time health data, improving patient outcomes and reducing hospital visits.
                 </p>
-                <div className="bg-indigo-50 p-4 rounded-lg">
+                <div className="bg-indigo-50 text-gray-600 p-4 rounded-lg">
                   <ul className="space-y-2">
                     <li className="flex items-start">
                       <svg className="h-5 w-5 text-indigo-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -248,7 +248,7 @@ export default function Features() {
                 <p className="text-gray-600 mb-6 text-lg">
                   Access licensed therapists and mental health specialists anytime, anywhere through secure video consultations.
                 </p>
-                <div className="bg-indigo-50 p-4 rounded-lg">
+                <div className="bg-indigo-50 text-gray-600 p-4 rounded-lg">
                   <ul className="space-y-2">
                     <li className="flex items-start">
                       <svg className="h-5 w-5 text-indigo-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -291,7 +291,7 @@ export default function Features() {
                 <p className="text-gray-600 mb-6 text-lg">
                   Connect with specialists across 30 countries for expert medical advice and consultations without travel barriers.
                 </p>
-                <div className="bg-indigo-50 p-4 rounded-lg">
+                <div className="bg-indigo-50 text-gray-600 p-4 rounded-lg">
                   <ul className="space-y-2">
                     <li className="flex items-start">
                       <svg className="h-5 w-5 text-indigo-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -334,7 +334,7 @@ export default function Features() {
                 <p className="text-gray-600 mb-6 text-lg">
                   Seamlessly integrates with electronic health records for efficient care management and continuity of treatment.
                 </p>
-                <div className="bg-indigo-50 p-4 rounded-lg">
+                <div className="bg-indigo-50 text-gray-600 p-4 rounded-lg">
                   <ul className="space-y-2">
                     <li className="flex items-start">
                       <svg className="h-5 w-5 text-indigo-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -363,7 +363,7 @@ export default function Features() {
       </section>
 
       {/* Additional Features Section */}
-      <section id="additional-features" className="py-24 bg-white">
+      <section id="additional-features" className="py-24 bg-indigo-600 text-white rounded-3xl m-2 md:m-5">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -375,7 +375,7 @@ export default function Features() {
             <h2 className="text-3xl font-bold mb-4">
               Elevating Healthcare Delivery
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
               Advanced features designed to provide accessible, secure, and continuous care across borders and time zones.
             </p>
           </motion.div>
@@ -389,7 +389,7 @@ export default function Features() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full border-t-4 border-t-primary">
+                <Card className="h-full">
                   <CardContent className="pt-6">
                     <feature.icon className="h-12 w-12 text-primary mb-4" />
                     <h3 className="font-semibold text-xl mb-2">{feature.title}</h3>

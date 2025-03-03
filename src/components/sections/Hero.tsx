@@ -1,22 +1,36 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Radio } from "lucide-react";
 import Navbar from "../layout/Navbar";
 
 export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const controls = useAnimation();
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
 
-  return (
-    <div className="h-screen overflow-hidden bg-indigo-500 rounded-3xl m-5">
-       <Navbar />
-      {/* Background gradient */}
-      {/* <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-background" /> */}
+  useEffect(() => {
+    const animateBackground = async () => {
+      while (true) {
+        await controls.start({
+          backgroundColor: ["#4f46e5", "#9333ea", "#2563eb"],
+          transition: { duration: 3, repeat: Infinity, repeatType: "mirror" },
+        });
+      }
+    };
 
+    animateBackground();
+  }, [controls]);
+
+  return (
+    <motion.div
+      className="h-screen overflow-hidden rounded-3xl m-2 md:m-5"
+      animate={controls}
+    >
+      <Navbar />
       <div className="container relative pt-20 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -98,6 +112,6 @@ export default function Hero() {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
