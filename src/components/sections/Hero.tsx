@@ -16,8 +16,8 @@ export default function Hero() {
     const animateBackground = async () => {
       while (true) {
         await controls.start({
-          backgroundColor: ["#4f46e5", "#9333ea", "#2563eb"],
-          transition: { duration: 3, repeat: Infinity, repeatType: "mirror" },
+          backgroundColor: ["rgba(79, 70, 229, 0.8)", "rgba(147, 51, 234, 0.8)", "rgba(37, 99, 235, 0.8)"],
+          transition: { duration: 5, repeat: Infinity, repeatType: "mirror" },
         });
       }
     };
@@ -27,7 +27,8 @@ export default function Hero() {
 
   return (
     <motion.div
-      className="h-screen overflow-hidden rounded-3xl m-2 md:m-5"
+      className="h-screen overflow-hidden rounded-3xl m-2 md:m-5 relative"
+     
       animate={controls}
     >
       <Navbar />
